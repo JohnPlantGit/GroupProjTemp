@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private float m_dashTimer;
     private float m_attackTimer;
     private bool m_canAttack;
+
 	// Use this for initialization
 	void Start ()
     {
@@ -57,7 +58,6 @@ public class Player : MonoBehaviour
                     m_enemies.RemoveAt(i);
                 }
             }
-            m_attackTimer = m_attackSpeed;
             m_facing.material.color = new Color(1, 0, 0);
             m_canAttack = false;
         }

@@ -36,10 +36,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        NavMeshPath path = new NavMeshPath();
-        NavMesh.CalculatePath(gameObject.transform.position, m_target.transform.position, NavMesh.AllAreas, path);
-
         m_movement = (m_target.transform.position - transform.position).normalized;
+        
         //m_movement = (path.corners[1] - transform.position).normalized;
         m_movement.y = 0;
     }
